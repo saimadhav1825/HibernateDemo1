@@ -8,6 +8,8 @@ public class Laptop {
 	@Id
 	private int lid;
 	private String lname;
+	//@ManyToOne-->many one realtion
+	//@ManyToMany-->many to many relation
 	public int getLid() {
 		return lid;
 	}
