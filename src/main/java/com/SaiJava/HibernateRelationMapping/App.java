@@ -20,6 +20,9 @@ public class App
     	s.setRollno(101);
     	s.setSname("siva");
     	s.setMarks("100");
+         //laptop.getStd().add(s);               -->for many to many
+    	//s.setLaptop(laptop);                -->for one to one relation 
+    	//s.getLaptop().add(l);                -->for one to many relation 
     	Configuration cfg=new Configuration().configure().addAnnotatedClass(Laptop.class).addAnnotatedClass(Student.class);
     	org.hibernate.service.ServiceRegistry rg=new ServiceRegistryBuilder().applySettings(cfg.getProperties()).buildServiceRegistry(); 
     	SessionFactory sf=cfg.buildSessionFactory(rg);
