@@ -7,8 +7,23 @@ import javax.persistence.Id;
 public class Student {
 	@Id
 	private int rollno;
-	private String sname;                //@ManyToOne-->many one realtion
-	                                         //@ManyToMany-->many to many relation
+	private String sname;                
+	@OneToOne //-->one to one relation between two tables 
+	//**private Laptop laptop;
+	//public Laptop getLaptop() {
+		//return laptop;
+	//}
+	//public void setLaptop(Laptop laptop) {
+		//this.laptop = laptop;
+	//}
+	@OneToMany(mappedBy="std")   //--?one to many relation between two tables 
+	//private java.util.List<Laptop> l=new ArrayList<Laptop>();
+	//public java.util.List<Laptop> getL() {
+	//	return l;
+	//}
+	//public void setL(java.util.List<Laptop> l) {
+		//this.l = l;
+	//}
 	private String marks;
 	public int getRollno() {
 		return rollno;
