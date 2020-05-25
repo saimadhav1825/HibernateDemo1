@@ -7,7 +7,8 @@ import javax.persistence.Id;
 public class Student {
 	@Id
 	private int rollno;
-	private String sname;
+	private String sname;                //@ManyToOne-->many one realtion
+	                                         //@ManyToMany-->many to many relation
 	private String marks;
 	public int getRollno() {
 		return rollno;
